@@ -1,0 +1,11 @@
+.interact {
+	width: 100%;
+	height: 100%;
+	flex: 1 1 auto;
+	background-image: url('/assets/living.jpg');
+	background-position: center center;
+	background-size:contain;
+	background-repeat: no-repeat;
+	display:flex;
+	justify-content: center;
+}

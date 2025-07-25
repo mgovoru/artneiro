@@ -1,0 +1,163 @@
+/* блок хедера */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	color: white;
+	z-index:4;
+}
+
+.headerContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px;
+	width: 100%;
+
+}
+
+.logoBox {
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+.logoLink {
+	color: white;
+}
+
+.navLinks {
+	display: flex;
+	align-items: center;
+
+}
+
+.navMenu {
+	display: flex;
+	align-items: center;
+	gap: 52px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.navLink {
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 3.2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+}
+
+.navLink:hover {
+	color: #ff8300;
+}
+
+@media (max-width: 991px) {
+	.navMenu {
+		gap: 30px;
+	}
+
+	.navLink {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 640px) {
+	.navbar {
+		justify-content: space-between;
+	}
+
+	.navLinks {
+		display: none;
+	}
+}
+
+/* блок бургера */
+
+.burger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	width: 30px;
+	height: 23px;
+	justify-content: space-between;
+	margin-left: 20px;
+}
+
+.burger span {
+	display: block;
+	height: 4px;
+	border-radius: 2px;
+	background-color: white;
+}
+
+@media (max-width: 900px) {
+	.navLinks {
+		display: flex;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(20, 20, 20, 0.95);
+		justify-content: center;
+		align-items: center;
+		transition: 0.4s;
+		opacity: 0;
+		pointer-events: none;
+		z-index: 1000;
+	}
+
+	.navLinks.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.navMenu {
+		flex-direction: column;
+		align-items: center;
+		gap: 32px;
+		display: flex;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	.navItem {
+		width: 100%;
+		text-align: center;
+	}
+
+	.navLink {
+		display: block;
+		padding: 14px 0;
+		font-size: 1.3rem;
+		font-weight: 500;
+		text-decoration: none;
+		border-radius: 8px;
+		transition: background 0.2s, color 0.2s;
+	}
+
+	.navLink:hover {
+		background: #292929;
+		color: #ff8300;
+	}
+
+	.headerContainer {
+		position: relative;
+		z-index: 1001;
+	}
+
+	.burger {
+		display: flex;
+	}
+}
+
+.noscroll {
+	overflow: hidden;
+}
