@@ -7,7 +7,7 @@ import styles from './page.module.css';
 export default function StateAnimations() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-  const [rotate, setRotate] = useState(0);
+
 
   return (
     <div className={styles.interact}>
@@ -16,7 +16,12 @@ export default function StateAnimations() {
           <motion.div
             className='box'
             animate={{ x, y, rotate }}
-            transition={{ type: 'spring' }}
+
+            transition={{
+              type: 'spring',
+              damping: 12,
+              stiffness: 200,
+            }}
           />
         </div>
         <div className='inputs'>

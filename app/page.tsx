@@ -3,6 +3,7 @@ import Squares from './compoments/Squares/Squares';
 
 
 export default function Home() {
+  function F(){return  }
 
 
   return (
