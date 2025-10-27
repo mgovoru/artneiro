@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 type Props = { link: string; handlClick: () => void; text: string };
 const links = [
   { link: '/about', text: 'Обо мне' },
-  { link: '/gallery', text: 'Галлерея' },
+  { link: '/gallery', text: 'Галерея' },
   { link: '/interactive', text: 'Интерактивно' }
 ];
 
