@@ -8,9 +8,9 @@ import { usePathname } from 'next/navigation';
 
 type Props = { link: string; handlClick: () => void; text: string };
 const links = [
-  { link: '/about', text: 'About' },
-  { link: '/interactive', text: 'Interactive' },
-  { link: '/gallery', text: 'Gallery' },
+  { link: '/about', text: 'Обо мне' },
+  { link: '/gallery', text: 'Галлерея' },
+  { link: '/interactive', text: 'Интерактивно' }
 ];
 
 export default function Header() {
@@ -67,7 +67,7 @@ export default function Header() {
       <div className={styles.headerContainer}>
         <div className={styles.logoBox}>
           <Link href='/' className={styles.logoLink}>
-            <TypeWriter text='Neurophotography' speed={300} />
+            <TypeWriter text='Нейроиллюстрация' speed={300} />
           </Link>
         </div>
         <AnimatePresence>

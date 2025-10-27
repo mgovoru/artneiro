@@ -10,8 +10,8 @@ const underdog = Underdog({
 });
 
 export const metadata: Metadata = {
-  title: 'Neurophotography',
-  description: 'Neurophotography',
+  title: 'AI Illustration',
+  description: 'AI Illustration',
 };
 
 export default function RootLayout({
