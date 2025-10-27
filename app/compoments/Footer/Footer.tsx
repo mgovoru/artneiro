@@ -28,7 +28,7 @@ export default function Footer() {
       ref={pathname === '/about' ? elementRef : undefined}
     >
       <div className={styles.footerContainer}>
-        <div className={styles.logoContainer}>Neurophotography</div>
+        <div className={styles.logoContainer}>Нейроиллюстрация</div>
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
             <span className={styles.copyrightText}>©2025 mgovoru</span>
