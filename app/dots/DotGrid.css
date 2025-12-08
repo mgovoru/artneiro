@@ -1,0 +1,18 @@
+.dot-grid {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+}
+
+.dot-grid__wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.dot-grid__canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+}

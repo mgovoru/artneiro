@@ -105,6 +105,10 @@ const itemData = [
     img: '/assets/woman_M.jpg',
     title: 'woman',
   },
+  {
+    img: '/assets/bagov.jpg',
+    title: 'skaz',
+  },
 ];
 
 const MBox = motion(Box);
