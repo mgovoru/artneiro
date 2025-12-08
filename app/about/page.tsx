@@ -1,18 +1,28 @@
 // components/SectionsScroll.js
 'use client';
 
+import Link from 'next/link';
 import styles from './page.module.css';
+import DotGrid from '../dots/DotGrid';
 
 const sectionsData = [
   {
     id: 1,
-    title: '- - -',
-    text: 'Я, Мария Говорухина, объединяю в своей работе творческое видение художника и техническую точность разработчика. Мой профессиональный путь в технологиях начался с фронтенд-разработки, где я изучала HTML, CSS, JavaScript, TypeScript и React. Эти навыки научили меня логическому мышлению, вниманию к деталям и пониманию того, как работают сложные системы. Однако параллельно я открыла для себя безграничные возможности генеративного искусства.',
+    title: 'github',
+    text: '@mgovoru',
+    link: 'http://www.github.com/mgovoru',
   },
   {
     id: 2,
-    title: '- - -',
-    text: 'В последнее время я углубилась в мир нейросетей и генеративного дизайна, освоив такие инструменты как Qwen, Leonardo AI и Perplexity. Я верю в то, что настоящее мастерство в генеративном искусстве лежит не в простом вводе запроса в нейросеть, а в глубоком понимании инструментов, тонком контроле каждого элемента и художественном видении. Мой процесс — это диалог между интуицией и алгоритмом, между идеей и её визуальной реализацией. Нейроиллюстрация — это возможность найти баланс между инновацией и эстетикой, между техническим совершенством и творческой свободой.',
+    title: 'telegram',
+    text: '@mgovoru',
+    link: 'https://t.me/mgovoru',
+  },
+  {
+    id: 3,
+    title: 'email',
+    text: 'mgovoru@yandex.ru',
+    link: 'mailto:m.govoru@yandex.ru',
   },
 ];
 
@@ -20,18 +30,42 @@ export default function SectionsScroll() {
 
 
   return (
-    <div className={styles.about}>
-      {sectionsData.map((section) => {
-
-
-        return (
-
-          <div className={styles.sectionAbout} key={section.id}>
-            <h2 className={styles.sectionAboutTitle}>{section.title}</h2>
-            <p className={styles.sectionAboutText}>{section.text}</p>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 1,
+        }}
+      >
+        <DotGrid
+          dotSize={3}
+          gap={15}
+          baseColor='#FFF'
+          activeColor='#d2691e'
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      </div>
+      <div className={styles.about}>
+        <h2 className={styles.sectionAboutTitle}>Maria Govorukhina</h2>
+        {sectionsData.map((section) => {
+          return (
+            <div className={styles.sectionAbout} key={section.id}>
+              <h2 className={styles.sectionAboutContact}>{section.title}</h2>
+              <Link href={section.link} className={styles.sectionAboutLink}>
+                <p className={styles.sectionAboutText}>{section.text}</p>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
